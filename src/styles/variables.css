@@ -1,0 +1,16 @@
+:root {
+  --black: #000;
+  --bg-dark: #19282f;
+  --dark-grey-01: rgb(20, 20, 20);
+  --dark-grey-02: rgb(61, 61, 61);
+  --dark-grey-03: rgb(124, 124, 124);
+
+  --white: #fff;
+  --bg-light: #effffd;
+  --light-grey-01: rgb(240, 240, 240);
+  --light-grey-02: rgb(167, 167, 167);
+  --light-grey-03: rgb(139, 139, 139);
+  --light-blue-01: #041562;
+  --light-blue-02: #24a19c;
+  --light-blue-03: #041562;
+}

@@ -1,0 +1,28 @@
+.curated-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  max-width: 900px;
+  overflow-x: auto;
+  padding: 1rem;
+}
+.curated-container::-webkit-scrollbar {
+  width: 5px;
+  height: 10px;
+}
+.curated-container::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: var(--light-grey-01);
+}
+.curated-container::-webkit-scrollbar-thumb {
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: var(--light-blue-02);
+  border-radius: 10px;
+}
+.cards-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin: auto;
+}

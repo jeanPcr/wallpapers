@@ -1,0 +1,12 @@
+.sidebar-container {
+  height: 100vh;
+  padding: 2rem;
+  box-shadow: 10px 0px 11px -7px rgba(0, 0, 0, 0.26);
+  transition: border-right ease-in-out 0.2s;
+}
+.dark.sidebar-container {
+  border-right: solid 1px var(--dark-grey-022);
+}
+.light.sidebar-container {
+  border-right: solid 1px var(--light-grey-01);
+}
