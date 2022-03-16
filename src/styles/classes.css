@@ -6,6 +6,12 @@
   justify-content: center;
   padding: 1rem;
   text-align: center;
+  position: relative;
+}
+.centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /*  SIZES */
@@ -30,10 +36,13 @@
   background-color: var(--bg-light);
 }
 
-/* TEXTS  */
-.text-dark {
-  color: var(--black);
+/* SHADOWS */
+.shadow {
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
 }
-.text-light {
-  color: var(--white);
+
+/* UTILS */
+
+.pointer {
+  cursor: pointer;
 }

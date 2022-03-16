@@ -4,25 +4,39 @@
   flex-direction: column;
   align-items: center;
   max-width: 900px;
-  overflow-x: auto;
   padding: 1rem;
-}
-.curated-container::-webkit-scrollbar {
-  width: 5px;
-  height: 10px;
-}
-.curated-container::-webkit-scrollbar-track {
-  border-radius: 10px;
-  background-color: var(--light-grey-01);
-}
-.curated-container::-webkit-scrollbar-thumb {
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: var(--light-blue-02);
-  border-radius: 10px;
+
+  height: 100%;
+  width: 100%;
 }
 .cards-container {
   display: flex;
+  height: 100%;
+  width: 100%;
   justify-content: space-between;
-  flex-direction: row;
   margin: auto;
+  max-width: 900px;
+  overflow-y: hidden;
+  padding: 2rem;
+  scroll-behavior: smooth;
+}
+
+.cards-container::-webkit-scrollbar {
+  height: 10px;
+  transition: all ease-in-out 0.2s;
+}
+.cards-container::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: var(--light-grey-01);
+  transition: all ease-in-out 0.2s;
+}
+.dark.cards-container::-webkit-scrollbar-thumb {
+  background-color: var(--dark-secondary);
+  border-radius: 10px;
+  transition: all ease-in-out 0.2s;
+}
+.light.cards-container::-webkit-scrollbar-thumb {
+  background-color: var(--light-secondary);
+  border-radius: 10px;
+  transition: all ease-in-out 0.2s;
 }

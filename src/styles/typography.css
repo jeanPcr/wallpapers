@@ -2,11 +2,46 @@ h1 {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 300;
 }
+h2 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+}
 h3 {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 300;
 }
+p {
+  font-family: "Josefin Sans", sans-serif;
+}
 .title {
   font-family: "Josefin Sans", sans-serif;
   text-align: center;
+}
+
+.text-dark {
+  color: var(--black);
+}
+.text-light {
+  color: var(--white);
+}
+.dark.text-primary {
+  color: var(--dark-primary);
+}
+.light.text-primary {
+  color: var(--light-primary);
+}
+.dark.text-secondary {
+  color: var(--dark-secondary);
+}
+.light.text-secondary {
+  color: var(--light-secondary);
+}
+.bold {
+  font-weight: bold;
+}
+.bold-lg {
+  font-weight: 600;
+}
+.bold-xl {
+  font-weight: 700;
 }

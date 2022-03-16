@@ -3,11 +3,13 @@
   box-shadow: 0 0 0 black;
   position: relative;
   margin-left: 1rem;
-  cursor: grab;
+  cursor: pointer;
   transition: transform ease-in-out 0.2s;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
+  min-width: 300px;
 }
 .card-container:hover {
   transform: scale(1.05);
@@ -21,5 +23,5 @@
   transition: color ease-in-out 0.5s;
 }
 .favorite-icon:hover {
-  color: var(--light-blue-02);
+  color: var(--light-primary);
 }

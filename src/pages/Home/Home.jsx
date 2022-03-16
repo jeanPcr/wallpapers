@@ -2,7 +2,7 @@ import React from "react";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import { useTheme } from "../../contexts/theme.context";
 import "./Home.css";
-import LOGO from "../../assets/logo.png";
+import LOGO from "../../assets/images/logo.png";
 import CuratedPhotos from "../../components/CuratedPhotos/CuratedPhotos";
 
 const Home = () => {

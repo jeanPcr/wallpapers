@@ -5,8 +5,8 @@
   transition: border-right ease-in-out 0.2s;
 }
 .dark.sidebar-container {
-  border-right: solid 1px var(--dark-grey-022);
+  background-color: #252525;
 }
 .light.sidebar-container {
-  border-right: solid 1px var(--light-grey-01);
+  background-color: #f6f6f6;
 }

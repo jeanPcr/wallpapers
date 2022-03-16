@@ -1,0 +1,26 @@
+.single-photo {
+  width: 90%;
+  margin-top: 100px;
+  height: 100%;
+  max-height: 90vh;
+}
+.single-photo > .image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+}
+.single-photo > .description {
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  margin: auto;
+}
+.single-photo > .description > .img-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

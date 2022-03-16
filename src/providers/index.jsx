@@ -1,6 +1,7 @@
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ThemeProvider } from "./theme.provider";
-import NavigationProvider from "./navigationProvider";
+import { ResearchProvider } from "./research.provider";
+import NavigationProvider from "./navigation.provider";
 
 const queryClient = new QueryClient();
 
@@ -8,7 +9,9 @@ const Providers = ({ children }) => {
   return (
     <QueryClientProvider client={queryClient}>
       <ThemeProvider>
-        <NavigationProvider>{children}</NavigationProvider>
+        <ResearchProvider>
+          <NavigationProvider>{children}</NavigationProvider>
+        </ResearchProvider>
       </ThemeProvider>
     </QueryClientProvider>
   );
