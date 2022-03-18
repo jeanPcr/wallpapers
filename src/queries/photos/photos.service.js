@@ -21,3 +21,18 @@ export const getPhotosByLocation = async (locale) => {
     })
   ).data;
 };
+export const getFavoritesPhotos = async (photo_IDs) => {
+  const promises = [];
+  if (photo_IDs && photo_IDs.length > 0) {
+    photo_IDs.forEach(async (photo_ID) => {
+      promises.push(api.get(`/photos/${photo_ID}`));
+    });
+  }
+
+  const photos = [];
+  const data = await Promise.all(promises);
+  data.forEach((photo) => {
+    photos.push(photo.data);
+  });
+  return photos;
+};

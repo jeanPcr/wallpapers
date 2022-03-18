@@ -6,7 +6,7 @@ import { useTheme } from "../../contexts/theme.context";
 import "./Photos.css";
 import PhotosGrid from "../../components/PhotosGrid/PhotosGrid";
 import { useResearch } from "../../contexts/research.context";
-import usePhotosByTopic from "../../queries/photos";
+import { usePhotosByTopic } from "../../queries/photos";
 
 const Photos = () => {
   const { isDark } = useTheme();

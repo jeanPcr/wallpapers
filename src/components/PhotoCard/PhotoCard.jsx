@@ -1,30 +1,55 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./PhotoCard.css";
 import { Favorite } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
 
-const PhotoCard = ({ height, width, photo, size }) => {
+const PhotoCard = ({ height, width, photo }) => {
   let navigate = useNavigate();
+  const [isFavorite, setIsFavorite] = useState(false);
+  const [storage, setStorage] = useState([]);
+
+  useEffect(() => {
+    const storage = window.localStorage.getItem("favorites");
+    if (storage !== "undefined") {
+      setStorage(JSON.parse(storage));
+    }
+  }, []);
+
+  useEffect(() => {
+    if (storage && storage.photo_IDs) {
+      storage.photo_IDs.forEach((photo_ID) => {
+        if (photo.id === photo_ID) {
+          setIsFavorite(true);
+        }
+      });
+    }
+  }, [storage]);
+
   const viewPhoto = () => {
     navigate(`/photos/one/${photo.id}`, { state: { photo } });
   };
-  const addToFavorite = (event) => {
+  const toggleFavorite = (event) => {
     event.stopPropagation();
     let favorites = {};
-    const prev_favorites = JSON.parse(window.localStorage.getItem("favorites"));
-    console.log(prev_favorites);
-    if (prev_favorites.photos) {
-      favorites = {
-        photos: [...prev_favorites.photos, photo.id],
-      };
+    if (storage && storage.photo_IDs) {
+      if (storage.photo_IDs.includes(photo.id)) {
+        favorites = {
+          photo_IDs: storage.photo_IDs.filter(
+            (photo_ID) => photo_ID !== photo.id
+          ),
+        };
+      } else {
+        favorites = {
+          photo_IDs: [...storage.photo_IDs, photo.id],
+        };
+      }
     } else {
       favorites = {
-        photos: [photo.id],
+        photo_IDs: [photo.id],
       };
     }
-
-    console.log(favorites);
     window.localStorage.setItem("favorites", JSON.stringify(favorites));
+    setStorage(favorites);
   };
   return (
     <div
@@ -33,9 +58,9 @@ const PhotoCard = ({ height, width, photo, size }) => {
       onClick={viewPhoto}
     >
       <Favorite
-        onClick={addToFavorite}
+        onClick={toggleFavorite}
         color="inherit"
-        className="favorite-icon"
+        className={isFavorite ? "favorite-icon active" : "favorite-icon"}
       />
     </div>
   );

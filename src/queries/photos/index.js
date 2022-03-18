@@ -1,9 +1,12 @@
 import { useQuery } from "react-query";
-import { getPhotosByTopic } from "./photos.service";
+import { getFavoritesPhotos, getPhotosByTopic } from "./photos.service";
 
-const usePhotosByTopic = (topic) =>
+export const usePhotosByTopic = (topic) =>
   useQuery(["photos-topic", topic], () => getPhotosByTopic(topic), {
     enabled: !!topic,
   });
-
-export default usePhotosByTopic;
+export const useFavoritesPhotos = (photo_IDs) => {
+  return useQuery(["favorites-photos", photo_IDs], () =>
+    getFavoritesPhotos(photo_IDs)
+  );
+};

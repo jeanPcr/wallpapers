@@ -25,3 +25,6 @@
 .favorite-icon:hover {
   color: var(--light-primary);
 }
+.favorite-icon.active {
+  color: var(--light-primary);
+}
