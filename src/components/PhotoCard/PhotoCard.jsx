@@ -23,7 +23,7 @@ const PhotoCard = ({ height, width, photo }) => {
         }
       });
     }
-  }, [storage]);
+  }, [storage, photo.id, storage.photo_IDs]);
 
   const viewPhoto = () => {
     navigate(`/photos/one/${photo.id}`, { state: { photo } });
