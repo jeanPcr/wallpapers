@@ -3,7 +3,7 @@
 This project is a school project allowing users to research, display and download wallpapers.
 
 # Demo 🖥
-https://vercel.com/jeanpcr/wallpapers
+https://wallpapers-puce.vercel.app/
 
 # Features ⚙️
 
